@@ -35,7 +35,7 @@ KISSY.add(function (S, Node,Base) {
                 if(!$container || !$container.length) return;
 
                 function type_next_character(i) {
-                    $container.html( words.slice(0, i + 1).join('') + cursor );
+                    $container.html( words.slice(0, i + 1).join('') + (i + 1 < words.length ? cursor : '') );
                     if (words.length >= i) {
                         setTimeout(function() {
                             type_next_character(i+1);

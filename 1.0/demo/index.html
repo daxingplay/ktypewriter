@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="http://g.tbcdn.cn/kissy/k/1.3.0/css/dpl/base-min.css">
 </head>
 <body>
-<h2>ktypewriter的demo</h2>
-<div id="J_Demo"></div>
+<h1>ktypewriter</h1>
+<h2>demo1：最简单的使用</h2>
+<div id="J_Demo1"></div>
+<h2>demo2：增加光标效果</h2>
+<div id="J_Demo2"></div>
 
 <script>
     var S = KISSY;
@@ -27,11 +30,17 @@
     }
 
     S.use('gallery/ktypewriter/1.0/index', function (S, Ktypewriter) {
-          new Ktypewriter({
-              container: '#J_Demo',
-              words: ['你', '好', '，', '欢', '迎', '使', '用', 'k', 't', 'y', 'p', 'e', 'w', 'r', 'i', 't', 'e', 'r', '！'],
-              delay: 0.3
-          });
+        new Ktypewriter({
+          container: '#J_Demo1',
+          words: ['你', '好', '，', '欢', '迎', '使', '用', 'k', 't', 'y', 'p', 'e', 'w', 'r', 'i', 't', 'e', 'r', '！'],
+          delay: 0.3
+        });
+        new Ktypewriter({
+            container: '#J_Demo2',
+            words: ['你', '好', '，', '欢', '迎', '使', '用', 'k', 't', 'y', 'p', 'e', 'w', 'r', 'i', 't', 'e', 'r', '！'],
+            delay: 0.1,
+            cursor: '_'
+        });
     })
 </script>
 </body>
